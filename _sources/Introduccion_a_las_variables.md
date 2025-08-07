@@ -3,7 +3,10 @@
 Este dataset de la UCI ofrece una rica base de datos sobre estudiantes universitarios, con variables académicas, demográficas y socioeconómicas conocidas al momento de la matrícula. Está diseñado como un problema de clasificación multiclase para predecir abandono, continuidad o graduación. Su calidad está respaldada por una sólida limpieza de datos, sin valores faltantes, y cuenta con documentación y respaldo institucional y académico.
 
 Registros: 4,424 estudiantes
+
 Campos: 36 características
+
+[Fuente de los datos](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
 
 Explicacion de los campos: 
 
