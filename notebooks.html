@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Funciones &#8212; My sample book</title>
+    <title>Implementacion del codigo &#8212; My sample book</title>
   
   
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -181,7 +183,8 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduccion_a_las_variables.html">Introduccion al dataset</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Funciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementacion del codigo</a></li>
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="Documentacion_Conclusiones.html">Documentacion</a></li>
@@ -371,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Funciones</h1>
+    <h1>Implementacion del codigo</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,7 +384,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a></li>
 </ul>
@@ -396,7 +400,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="implementacion-del-codigo">
+<h1>Implementacion del codigo<a class="headerlink" href="#implementacion-del-codigo" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -406,10 +412,13 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="funciones">
 <h1>Funciones<a class="headerlink" href="#funciones" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
@@ -1399,127 +1408,6 @@ Resumen:
 <img alt="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" src="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" />
 </div>
 </div>
-<p>Podemos observar que en varias de las variables hay datos atipicos muy presentes. Como no son errores, se va a realizar una imputacion a traves de la mediana</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_copy</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numericas</span><span class="p">:</span>
-    <span class="n">Q1</span> <span class="o">=</span> <span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
-    <span class="n">Q3</span> <span class="o">=</span> <span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
-    <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
-    <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
-    <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
-    <span class="n">median</span> <span class="o">=</span> <span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-    <span class="n">df_copy</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">),</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">median</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_copy</span><span class="p">[</span><span class="n">numericas</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Distribucion de variables numericas&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/0ad7b6daa1fdfcfc13b53565a9a0c12d91a8c98c0b9ecaebd907f5d147b183cc.png" src="_images/0ad7b6daa1fdfcfc13b53565a9a0c12d91a8c98c0b9ecaebd907f5d147b183cc.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Unemployment rate&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de la Tasa de desempleo&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Unemployment Rate (%)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0%&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/9a1aa6952be23594da1767147198f738bffcd3d1fff98803f0f6d0cde17041ac.png" src="_images/9a1aa6952be23594da1767147198f738bffcd3d1fff98803f0f6d0cde17041ac.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Inflation rate&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de la Tasa de Inflación&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Inflation Rate (%)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0%&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/db512becd0572dc9c872b7d1d13c8654037081cebed1d5e2c5b4e9e3f6c702d3.png" src="_images/db512becd0572dc9c872b7d1d13c8654037081cebed1d5e2c5b4e9e3f6c702d3.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">numerica</span> <span class="ow">in</span> <span class="n">numericas</span><span class="p">:</span>
-  <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">numerica</span><span class="p">)</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Boxplot de </span><span class="si">{</span><span class="n">numerica</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/8e736a7d828f0689c61c850c7522232710661c20adb34eabd8ca2424dcdc93b2.png" src="_images/8e736a7d828f0689c61c850c7522232710661c20adb34eabd8ca2424dcdc93b2.png" />
-<img alt="_images/dff6af08dcd1b9d8b21938466704f1f320687694f225af5009cfaa2f1f2152ca.png" src="_images/dff6af08dcd1b9d8b21938466704f1f320687694f225af5009cfaa2f1f2152ca.png" />
-<img alt="_images/84e95236e6eb376e171e5cc569a2bad8896099a30c3e87c017f6be9c58409a57.png" src="_images/84e95236e6eb376e171e5cc569a2bad8896099a30c3e87c017f6be9c58409a57.png" />
-<img alt="_images/8e761ec23f5cdd21fd9ca61cbfd1f7bd079255625d8864257cdcac08eadfe0c8.png" src="_images/8e761ec23f5cdd21fd9ca61cbfd1f7bd079255625d8864257cdcac08eadfe0c8.png" />
-<img alt="_images/91f9aab19c5fe2e720f6fd9bdbe59147efac4bad731950d74008b7f38dfc4d63.png" src="_images/91f9aab19c5fe2e720f6fd9bdbe59147efac4bad731950d74008b7f38dfc4d63.png" />
-<img alt="_images/cc3c18a7a1179f8e462b2e1df320986e764075a843113c1b1e99030b7d218e4b.png" src="_images/cc3c18a7a1179f8e462b2e1df320986e764075a843113c1b1e99030b7d218e4b.png" />
-<img alt="_images/f1876050bb82f26da0766e81c0f7db40aa2ff9ae514381d154a9b77a4795675e.png" src="_images/f1876050bb82f26da0766e81c0f7db40aa2ff9ae514381d154a9b77a4795675e.png" />
-<img alt="_images/34cd03b956af8d4e132eb42414090a337d3535e4867352802fd11ee4c430a564.png" src="_images/34cd03b956af8d4e132eb42414090a337d3535e4867352802fd11ee4c430a564.png" />
-<img alt="_images/f9530d85e6b6101d9995808b4786cdc7bef27c076a5e587f6d8c1cea8c35d88e.png" src="_images/f9530d85e6b6101d9995808b4786cdc7bef27c076a5e587f6d8c1cea8c35d88e.png" />
-<img alt="_images/d3bbd8ed9d850cda1749e3c0362851b26f4f03a55c7d5d3928b12dd176d92eb3.png" src="_images/d3bbd8ed9d850cda1749e3c0362851b26f4f03a55c7d5d3928b12dd176d92eb3.png" />
-<img alt="_images/cc8c7066ce63f4513cf0c2d3ce9d90f70451e188fb7adf54d05bde4454380ed4.png" src="_images/cc8c7066ce63f4513cf0c2d3ce9d90f70451e188fb7adf54d05bde4454380ed4.png" />
-<img alt="_images/2386eb86c6812d5a7b70de140c8d3d94b54172032e1c0dc9a8eb8fafa27fa144.png" src="_images/2386eb86c6812d5a7b70de140c8d3d94b54172032e1c0dc9a8eb8fafa27fa144.png" />
-<img alt="_images/3879c214bdcfd446d8b9604db583d302571cc7657b73a34b418388c59a4e077f.png" src="_images/3879c214bdcfd446d8b9604db583d302571cc7657b73a34b418388c59a4e077f.png" />
-<img alt="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" src="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Unemployment rate&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Boxplot de la Tasa de Desempleo&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Unemployment Rate (%)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/24c47769da9fe0851a32c0eac1270a9bc0c6b3e614e94723ac88276646bee204.png" src="_images/24c47769da9fe0851a32c0eac1270a9bc0c6b3e614e94723ac88276646bee204.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Inflation rate&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Boxplot de la Tasa de Inflacion&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Inflation Rate (%)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" src="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" />
-</div>
-</div>
 <p>codificamos las variables que tienen categorias asociadas a ellas y las variables categoricas que existen en el dataframe</p>
 <p>Se verifica la distribucion de cada categoria utilizando value_counts</p>
 <div class="cell docutils container">
@@ -1532,8 +1420,8 @@ Resumen:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">categoricas</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
-  <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_copy</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">df_copy</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+  <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribución de </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1892,7 +1780,7 @@ Name: count, dtype: int64
 <p>Realizamos la matriz de correlacion</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_corr</span><span class="o">=</span><span class="n">df_copy</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_corr</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1915,7 +1803,7 @@ Name: count, dtype: int64
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="_images/dff7a6e174bfd536da9ec99e50a7ae9149d8fbe8bf4dd67364719b5fb0bf4e33.png" src="_images/dff7a6e174bfd536da9ec99e50a7ae9149d8fbe8bf4dd67364719b5fb0bf4e33.png" />
+<img alt="_images/773fe050c2df73742fadf100dbd6bbfad9cf61edecda91414e6d9fdb7b75943c.png" src="_images/773fe050c2df73742fadf100dbd6bbfad9cf61edecda91414e6d9fdb7b75943c.png" />
 </div>
 </div>
 <p>Podemos observar que las variables academicas estan fuertemente correlacionadas entre si y las variables demograficas no tienen una correlacion muy grande con el desempeño academico</p>
@@ -1924,8 +1812,8 @@ Name: count, dtype: int64
 <p>##Clasificacion</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_clas</span><span class="o">=</span><span class="n">df_copy</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">])</span>
-<span class="n">Y_clas</span><span class="o">=</span><span class="n">df_copy</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_clas</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">])</span>
+<span class="n">Y_clas</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1938,6 +1826,49 @@ Name: count, dtype: int64
 </div>
 </div>
 <p>#Regresion</p>
+<p>Inicialmente tenemos que crear una nueva variable <em>promedio final</em> solicitada por el ejercicio</p>
+<p>a = promedio primer semestre
+b = promedio segundo semestre
+<span class="math notranslate nohighlight">\(promedio final = (a+b)/2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promedio_final</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Curricular units 1st sem (grade)&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Curricular units 2nd sem (grade)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promedio_final</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     0.000
+1    20.835
+2     0.000
+3    19.630
+4    18.830
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_reg</span><span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Curricular units 1st sem (grade)&#39;</span><span class="p">,</span><span class="s1">&#39;Curricular units 2nd sem (grade)&#39;</span><span class="p">])</span>
+<span class="n">Y_reg</span><span class="o">=</span> <span class="n">promedio_final</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_reg</span><span class="p">,</span> <span class="n">X_test_reg</span><span class="p">,</span> <span class="n">y_train_reg</span><span class="p">,</span> <span class="n">y_test_reg</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_reg</span><span class="p">,</span><span class="n">Y_reg</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">Y_clas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>#Preprocesamiento de datos</p>
 <p>Ahora realizamos el preprocesamiento de datos</p>
 <p>Las variables binarias ya estan codificadas como 0 y 1 por lo que se mantienen igual</p>
@@ -2215,7 +2146,8 @@ Name: count, dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a></li>
 </ul>
