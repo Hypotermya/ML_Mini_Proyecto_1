@@ -74,7 +74,7 @@ Curricular units 2nd sem (approved): Number of curricular units approved in the 
 
 Curricular units 2nd sem (grade): Grade average in the 2nd semester (between 0 and 20)
 
-Curricular units 2nd sem (without evaluations): Number of curricular units without evalutions in the 1st semester
+Curricular units 2nd sem (without evaluations): Number of curricular units approved in the 2nd semester
 
 Unemployment rate: Unemployment rate (%)
 

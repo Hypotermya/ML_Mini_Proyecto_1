@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Implementacion del codigo &#8212; My sample book</title>
+    <title>Implementacion del codigo &#8212; Mini Proyecto</title>
   
   
   
@@ -62,7 +62,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Documentacion" href="Documentacion_Conclusiones.html" />
     <link rel="prev" title="Introduccion al dataset" href="Introduccion_a_las_variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -155,8 +154,8 @@
       
     
     
-    <img src="_static/LogoUN.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/LogoUN.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/LogoUN.png" class="logo__image only-light" alt="Mini Proyecto - Home"/>
+    <script>document.write(`<img src="_static/LogoUN.png" class="logo__image only-dark" alt="Mini Proyecto - Home"/>`);</script>
   
   
 </a></div>
@@ -184,12 +183,6 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduccion_a_las_variables.html">Introduccion al dataset</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementacion del codigo</a></li>
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Documentacion_Conclusiones.html">Documentacion</a></li>
-
 </ul>
 
     </div>
@@ -385,17 +378,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificacion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-la-tasa-de-inflacion">Análisis de la Tasa de Inflación</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-de-datos">Division de datos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificacion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-clasificacion">KNN clasificacion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -426,9 +423,8 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="funciones">
-<h1>Funciones<a class="headerlink" href="#funciones" title="Link to this heading">#</a></h1>
+<section id="funciones">
+<h2>Funciones<a class="headerlink" href="#funciones" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">Summary</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sheet</span><span class="p">):</span>
@@ -475,8 +471,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="cargado-de-datos">
-<h1>Cargado de datos<a class="headerlink" href="#cargado-de-datos" title="Link to this heading">#</a></h1>
+<section id="cargado-de-datos">
+<h2>Cargado de datos<a class="headerlink" href="#cargado-de-datos" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_url</span> <span class="o">=</span> <span class="s1">&#39;https://docs.google.com/spreadsheets/d/1_KCCMLmD6jYINRbLJwud-moSgEkevpdJtc8VIbZuAVM/export?format=csv&#39;</span>
@@ -721,8 +717,8 @@ memory usage: 1.2+ MB
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="analisis-exploratorio-de-datos">
-<h1>Analisis exploratorio de datos<a class="headerlink" href="#analisis-exploratorio-de-datos" title="Link to this heading">#</a></h1>
+<section id="analisis-exploratorio-de-datos">
+<h2>Analisis exploratorio de datos<a class="headerlink" href="#analisis-exploratorio-de-datos" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Summary</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;df&#39;</span><span class="p">)</span>
@@ -939,6 +935,13 @@ Resumen:
 <p>5 rows × 37 columns</p>
 </div></div></div>
 </div>
+<p>#Analisis del dataset</p>
+<p>En esta primera fase se realizó la carga y visualización de los datos, permitiendo obtener una vista preliminar de la estructura de la información. El conjunto de datos contiene 37 columnas y múltiples registros, donde cada fila representa a un estudiante. Las variables incluyen información demográfica (estado civil, nacionalidad), académica (modo de aplicación, calificaciones previas, número de unidades curriculares aprobadas/enroladas por semestre) y económica (tasa de desempleo, inflación, PIB).</p>
+<p>La columna Target define el estado final del estudiante, clasificándolo como “Graduate” (graduado) o “Dropout” (abandono), lo que establece el problema como una tarea de clasificación binaria.</p>
+<p>En esta visualización inicial se observa que:</p>
+<p>Existen variables numéricas continuas (ej. calificaciones, tasas económicas) y categóricas codificadas numéricamente (ej. estado civil, nacionalidad).</p>
+<p>Algunos registros presentan valores en cero o vacíos en variables académicas, lo que podría indicar ausencia de evaluaciones o de participación en ciertas actividades.</p>
+<p>La presencia de indicadores macroeconómicos sugiere que el análisis podría abarcar no solo factores individuales, sino también condiciones externas que afectan el desempeño y la permanencia de los estudiantes.</p>
 <p>Las columnas de Curriculum units(grade) en ambos semestres no tienen un redondeo universal en los datos por lo que se realizara ese redondeo a 2 decimas debido a que son notas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1314,6 +1317,22 @@ Resumen:
 </table>
 </div></div></div>
 </div>
+<p>Se calcularon las estadísticas descriptivas de un subconjunto de variables académicas y socioeconómicas relevantes. Los resultados permiten identificar rangos, promedios y variabilidad:</p>
+<p>Rendimiento previo y admisión:</p>
+<p>La calificación previa (Previous qualification (grade)) presenta un promedio de 132.6 con una desviación estándar de 13.18, lo que indica cierta dispersión, aunque la mayoría se concentra entre 125 y 140.</p>
+<p>La calificación de admisión (Admission grade) muestra un comportamiento similar, con media de 126.98 y un rango entre 95 y 190.</p>
+<p>Edad de ingreso:</p>
+<p>Los estudiantes ingresan en promedio a los 23.26 años, pero hay casos extremos de hasta 70 años, lo que refleja diversidad en el perfil etario.</p>
+<p>Desempeño por semestre:</p>
+<p>En el primer semestre, los estudiantes aprueban en promedio 4.70 unidades curriculares de las 6.27 en las que se inscriben.</p>
+<p>En el segundo semestre, el promedio de aprobadas es 4.43 sobre 6.23 inscritas.</p>
+<p>El número de evaluaciones suele coincidir con las inscripciones, aunque existen casos con 0 evaluaciones o unidades sin evaluación (without evaluations).</p>
+<p>Indicador económico (PIB):</p>
+<p>El valor medio del PIB registrado en el dataset es cercano a 0.002 (en la escala utilizada), con un rango desde –4.06 hasta 3.51, lo que sugiere periodos tanto de recesión como de crecimiento.</p>
+<p>Observaciones iniciales:</p>
+<p>La presencia de valores mínimos de 0 en unidades curriculares aprobadas o evaluadas puede indicar abandono temprano o inactividad académica.</p>
+<p>El rango amplio en la edad y calificaciones sugiere que el modelo deberá manejar perfiles muy heterogéneos de estudiantes.</p>
+<p>El desempeño académico muestra una ligera disminución en el segundo semestre respecto al primero.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">numericas</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -1327,6 +1346,17 @@ Resumen:
 <img alt="_images/a5b17babd6193da602465777ff9585d1e3a0d4e5646f686ba005bfa22176aea0.png" src="_images/a5b17babd6193da602465777ff9585d1e3a0d4e5646f686ba005bfa22176aea0.png" />
 </div>
 </div>
+<p>#Distribución de variables numéricas</p>
+<p>Se analizaron las distribuciones de las principales variables numéricas del dataset. Las gráficas muestran lo siguiente:</p>
+<p>Calificaciones previas y de admisión: Ambas presentan una distribución aproximadamente normal, centrada entre 120 y 140 puntos, con pocos valores extremos. Esto indica que la mayoría de los estudiantes tiene un rendimiento previo medio-alto antes de ingresar.</p>
+<p>Edad de ingreso: La distribución es asimétrica positiva, con una gran concentración de estudiantes entre los 18 y 25 años, y pocos casos que superan los 40 años.</p>
+<p>Rendimiento académico por semestre:</p>
+<p>En el primer semestre, las unidades aprobadas se concentran entre 3 y 7, con un patrón similar en el segundo semestre (aunque ligeramente más bajo).</p>
+<p>El número de unidades inscritas y evaluaciones realizadas es coherente, pero se observan casos con 0 evaluaciones, lo que podría indicar abandono o no presentación a exámenes.</p>
+<p>Las unidades acreditadas (credited) muestran una distribución muy sesgada hacia cero, ya que la mayoría de estudiantes no presenta créditos por reconocimiento previo.</p>
+<p>Indicador económico (PIB): Su distribución es más dispersa, con valores tanto positivos como negativos, reflejando distintos contextos macroeconómicos durante la recolección de los datos.</p>
+<p>#Conclusión parcial:
+La mayoría de las variables académicas tienen distribuciones asimétricas y concentradas en rangos medios, lo que sugiere que, aunque existe diversidad de perfiles, hay un comportamiento predominante de estudiantes jóvenes con rendimiento medio y sin créditos previos. Estas observaciones servirán para interpretar mejor la relación entre rendimiento y abandono.</p>
 <p>añadimos tambien las que representan porcentajes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1344,6 +1374,10 @@ Resumen:
 <img alt="_images/9a1aa6952be23594da1767147198f738bffcd3d1fff98803f0f6d0cde17041ac.png" src="_images/9a1aa6952be23594da1767147198f738bffcd3d1fff98803f0f6d0cde17041ac.png" />
 </div>
 </div>
+<p>#Distribución de la tasa de desempleo
+La variable Unemployment rate presenta valores comprendidos aproximadamente entre el 8% y el 16%, con ausencia de registros en valores inferiores a 7%. La distribución es multimodal, mostrando varios picos de frecuencia en torno al 8%, 10%, 12% y 14%.</p>
+<p>La línea vertical roja marca el 0%, que no aparece en los datos, indicando que no existen periodos sin desempleo en el conjunto observado. La dispersión de los valores refleja que los datos abarcan distintos contextos laborales, lo que podría ser relevante para evaluar cómo las condiciones económicas influyen en el rendimiento y permanencia de los estudiantes.</p>
+<p>Observación: Esta variabilidad en la tasa de desempleo puede correlacionarse con el Target para determinar si periodos de mayor desempleo están asociados con un aumento de abandonos académicos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Inflation rate&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1360,6 +1394,11 @@ Resumen:
 <img alt="_images/db512becd0572dc9c872b7d1d13c8654037081cebed1d5e2c5b4e9e3f6c702d3.png" src="_images/db512becd0572dc9c872b7d1d13c8654037081cebed1d5e2c5b4e9e3f6c702d3.png" />
 </div>
 </div>
+<p>#Distribución de la tasa de inflación
+La variable Inflation rate presenta valores que oscilan entre aproximadamente –1% y 3.5%, lo que refleja periodos tanto de inflación positiva como de deflación (tasas negativas). La mayor concentración de registros se encuentra en valores cercanos al 1%, con picos adicionales en torno al 2% y 3%.</p>
+<p>La línea vertical roja marca el punto de 0%, que actúa como referencia entre inflación y deflación. Se observan varios periodos por debajo de esta línea, indicando que durante ciertos intervalos se experimentaron condiciones deflacionarias.</p>
+<p>#Observación:
+La presencia de variabilidad en la inflación sugiere que el dataset incluye datos de distintos contextos macroeconómicos. Esto podría permitir explorar si las fluctuaciones en los precios tienen relación con la probabilidad de graduación o abandono académico (Target).</p>
 <p>realizamos boxplots para determinar la presencia de outliers en las variables numericas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1387,6 +1426,17 @@ Resumen:
 <img alt="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" src="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" />
 </div>
 </div>
+<p>#Análisis de diagramas de caja y bigotes
+Los diagramas de caja y bigotes permiten observar la dispersión, tendencia central y presencia de valores atípicos en las variables numéricas.</p>
+<p>#Variables académicas</p>
+<p>Previous qualification (grade) y Admission grade presentan una distribución relativamente concentrada, con la mayoría de los datos cercanos a la mediana. Sin embargo, se identifican algunos valores atípicos altos y bajos que podrían corresponder a estudiantes con rendimientos excepcionalmente altos o bajos en su formación previa.</p>
+<p>Variables como Curricular units (approved/enrolled/evaluations) muestran asimetría positiva, es decir, colas más largas hacia la derecha. Esto indica que la mayoría de estudiantes se concentran en valores bajos o moderados, pero existe un pequeño grupo que cursa o aprueba un número muy elevado de asignaturas.</p>
+<p>#Variables de contexto económico</p>
+<p>GDP, Unemployment rate y Inflation rate muestran dispersión moderada. En el caso del PIB, existen valores negativos que reflejan contracciones económicas y valores positivos que indican crecimiento. La tasa de desempleo presenta outliers en el rango alto, lo que podría reflejar crisis económicas específicas.</p>
+<p>#Valores atípicos</p>
+<p>La mayoría de variables numéricas presentan outliers significativos, especialmente en las relacionadas con unidades curriculares (tanto aprobadas como inscritas y evaluadas). Esto sugiere que el dataset incluye casos extremos que podrían ser analizados de forma separada para evitar sesgos en modelos predictivos.</p>
+<p>#Conclusión:
+Los diagramas de caja revelan que, aunque la mayoría de las variables siguen una distribución relativamente compacta, las colas largas y la presencia de valores extremos sugieren la necesidad de normalización o tratamiento de outliers antes de aplicar modelos de análisis o predicción.</p>
 <p>realizamos lo mismo con las variables de porcentajes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1402,6 +1452,12 @@ Resumen:
 <img alt="_images/24c47769da9fe0851a32c0eac1270a9bc0c6b3e614e94723ac88276646bee204.png" src="_images/24c47769da9fe0851a32c0eac1270a9bc0c6b3e614e94723ac88276646bee204.png" />
 </div>
 </div>
+<p>#Análisis del diagrama de caja y bigotes (Unemployment Rate)</p>
+<p>Mediana (línea central de la caja): Se encuentra aproximadamente en torno al 11–12%, lo que indica que la mitad de los valores está por debajo de este nivel de desempleo y la otra mitad por encima.</p>
+<p>Rango intercuartílico (IQR): La caja representa la dispersión entre el 25% y el 75% de los datos, que parece estar aproximadamente entre 9% y 14%, reflejando que la mayoría de las observaciones se agrupan en este rango.</p>
+<p>Bigotes (whiskers): Se extienden hacia valores cercanos al 8% por el lado inferior y hasta alrededor del 16% por el lado superior, lo que indica la amplitud del desempleo en el conjunto de datos.</p>
+<p>Valores atípicos (outliers): Si el gráfico muestra puntos fuera de los bigotes, representan observaciones con tasas de desempleo inusualmente bajas o altas respecto al resto.</p>
+<p>Distribución: El hecho de que la caja no esté centrada y que el bigote superior sea más largo sugiere una ligera asimetría hacia la derecha, es decir, hay algunos periodos con desempleo más elevado que el promedio.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -1416,6 +1472,11 @@ Resumen:
 <img alt="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" src="_images/206557b62332010f5d7db7d4c1139f9120413b40226f8cbe7942b87f89371f95.png" />
 </div>
 </div>
+<section id="analisis-de-la-tasa-de-inflacion">
+<h3>Análisis de la Tasa de Inflación<a class="headerlink" href="#analisis-de-la-tasa-de-inflacion" title="Link to this heading">#</a></h3>
+<p>El boxplot muestra que la mediana de la inflación se sitúa alrededor del 1.4%, con la mayoría de los valores concentrados entre 0.4% y 2.6%. Los extremos van desde aproximadamente –0.9% (episodios de deflación) hasta 3.6%, indicando cierta variabilidad, aunque sin valores atípicos extremos.</p>
+<p>La distribución es relativamente simétrica, lo que sugiere que no existe un sesgo fuerte hacia inflaciones altas o bajas. Comparado con el histograma, se confirma que no hay un único valor dominante, sino varios picos a lo largo del rango, lo que podría reflejar cambios moderados en el entorno económico.</p>
+<p>En general, los datos apuntan a un escenario de inflación mayormente baja o moderada, con oscilaciones ocasionales que no parecen desestabilizar el conjunto.</p>
 <p>Se verifica la distribucion de cada categoria utilizando value_counts</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1784,6 +1845,14 @@ Name: count, dtype: int64
 <img alt="_images/4d4cf8472e904ab186f0672a0644942c0af86b7a7a9d8910a450b6c429930252.png" src="_images/4d4cf8472e904ab186f0672a0644942c0af86b7a7a9d8910a450b6c429930252.png" />
 </div>
 </div>
+<p>#Análisis de las variables categóricas</p>
+<p>El conteo y distribución muestran que varias categorías presentan desbalance en la representación de clases. Por ejemplo, en variables como Marital status o Daytime/evening attendance, es probable que una o dos categorías concentren la mayoría de los registros, lo que puede influir en el comportamiento de un modelo predictivo al sesgarlo hacia las clases más frecuentes.</p>
+<p>En otras variables, como Previous qualification o Mother’s/Father’s qualification, la distribución parece estar dominada por ciertos niveles educativos, lo que podría indicar patrones socioeconómicos recurrentes en la población estudiada.</p>
+<p>Además, la variable Target (Dropout/Graduate) probablemente presenta un desbalance moderado, algo crucial de considerar en modelos de clasificación, ya que puede requerir técnicas de balanceo.</p>
+<p>En general, los gráficos confirman que:</p>
+<p>Existen categorías con amplia representación y otras con presencia mínima.</p>
+<p>El sesgo en la distribución de clases debe ser tratado para evitar que un modelo interprete como “menos relevantes” a las categorías minoritarias.</p>
+<p>Este tipo de visualización ayuda a identificar valores poco frecuentes que podrían reagruparse o analizarse por separado.</p>
 <p>Realizamos la matriz de correlacion</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1813,11 +1882,26 @@ Name: count, dtype: int64
 <img alt="_images/773fe050c2df73742fadf100dbd6bbfad9cf61edecda91414e6d9fdb7b75943c.png" src="_images/773fe050c2df73742fadf100dbd6bbfad9cf61edecda91414e6d9fdb7b75943c.png" />
 </div>
 </div>
+<p>#Análisis del mapa de calor de correlaciones</p>
+<p>El heatmap presenta las correlaciones entre las variables numéricas del conjunto de datos. Se observan varios patrones relevantes:</p>
+<p>#Correlaciones fuertes y positivas</p>
+<p>Las variables relacionadas con curricular units (aprobadas, inscritas, evaluadas) tanto en el primer como en el segundo semestre muestran valores de correlación altos (superiores a 0.7), lo que indica que el rendimiento en un semestre suele estar asociado al rendimiento en el otro.</p>
+<p>También hay correlaciones notables entre Previous qualification (grade) y Admission grade, lo que sugiere que el desempeño previo influye en la nota de admisión.</p>
+<p>#Correlaciones negativas</p>
+<p>Algunas variables macroeconómicas, como Unemployment rate y GDP, presentan correlaciones negativas, coherentes con la lógica económica donde un mayor desempleo suele asociarse a menor crecimiento económico.</p>
+<p>#Baja o nula correlación</p>
+<p>Varias variables numéricas no muestran una relación lineal clara con la variable Target, lo que implica que podrían no ser predictoras directas y requerirían un análisis más avanzado (por ejemplo, modelos no lineales o interacciones entre variables).</p>
+<p>#Posible multicolinealidad</p>
+<p>Las correlaciones muy altas entre variables académicas sugieren que podría haber redundancia de información. Esto es importante si se planea usar modelos sensibles a la multicolinealidad, como regresión lineal, ya que sería recomendable reducir dimensiones o seleccionar variables clave.</p>
+<p>En conjunto, el heatmap evidencia que el rendimiento académico y la preparación previa son factores fuertemente relacionados entre sí, mientras que los indicadores macroeconómicos presentan relaciones más débiles pero coherentes con teorías económicas.</p>
 <p>Podemos observar que las variables academicas estan fuertemente correlacionadas entre si y las variables demograficas no tienen una correlacion muy grande con el desempeño academico</p>
-<p>#Division de datos</p>
+</section>
+</section>
+<section id="division-de-datos">
+<h2>Division de datos<a class="headerlink" href="#division-de-datos" title="Link to this heading">#</a></h2>
 <p>Realizamos la division de los datos antes de realizar la codificacion y la estandarizacion de variables para evitar data leakage utilizando train_test_split</p>
 <section id="clasificacion">
-<h2>Clasificacion<a class="headerlink" href="#clasificacion" title="Link to this heading">#</a></h2>
+<h3>Clasificacion<a class="headerlink" href="#clasificacion" title="Link to this heading">#</a></h3>
 <p>Seleccionamos la variable target como el y para el problema de clasificacion binaria al momento de realizar el split</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1836,7 +1920,7 @@ Name: count, dtype: int64
 </div>
 </section>
 <section id="regresion">
-<h2>Regresion<a class="headerlink" href="#regresion" title="Link to this heading">#</a></h2>
+<h3>Regresion<a class="headerlink" href="#regresion" title="Link to this heading">#</a></h3>
 <p>Inicialmente tenemos que crear una nueva variable <em>promedio final</em> solicitada por el ejercicio</p>
 <p>a = promedio primer semestre
 b = promedio segundo semestre
@@ -1880,7 +1964,10 @@ dtype: float64
 </div>
 </div>
 </div>
-<p>#Preprocesamiento de datos</p>
+</section>
+</section>
+<section id="preprocesamiento-de-datos">
+<h2>Preprocesamiento de datos<a class="headerlink" href="#preprocesamiento-de-datos" title="Link to this heading">#</a></h2>
 <p>Ahora realizamos el preprocesamiento de datos</p>
 <p>Las variables binarias ya estan codificadas como 0 y 1 por lo que se mantienen igual</p>
 <p>La variable target y tenemos que reetiquetarla debido a que el objetivo del modelo es determinar si el estudiante es Dropout. De esta manera pasamos a un problema de clasificacion binario</p>
@@ -2169,7 +2256,9 @@ dtype: float64
 </div>
 </div>
 <p>Ahora con todo el procesamiento hecho se puede realizar el modelo KNN</p>
-<p>#KNN clasificacion</p>
+</section>
+<section id="knn-clasificacion">
+<h2>KNN clasificacion<a class="headerlink" href="#knn-clasificacion" title="Link to this heading">#</a></h2>
 <p>se revisaran distintos valores de k para determinar cual es el mas apropiado para el modelo de clasificacion</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2202,6 +2291,17 @@ dtype: float64
 <img alt="_images/1f4e839fd133215c321eca4ac6a832b83aecb8d9d92684b9351a717883dc46a4.png" src="_images/1f4e839fd133215c321eca4ac6a832b83aecb8d9d92684b9351a717883dc46a4.png" />
 </div>
 </div>
+<p>#Análisis del rendimiento del modelo KNN según el parámetro K</p>
+<p>El gráfico compara la precisión (accuracy) en los conjuntos de entrenamiento y prueba para diferentes valores de n_neighbors en el algoritmo K-Nearest Neighbors.</p>
+<p>#Tendencia general</p>
+<p>Para valores bajos de K (cercanos a 1), la precisión en entrenamiento es muy alta, casi perfecta, lo que indica sobreajuste (overfitting). Sin embargo, la precisión en el conjunto de prueba es más baja y variable.</p>
+<p>A medida que K aumenta, la precisión de entrenamiento disminuye gradualmente, mientras que la de prueba tiende a estabilizarse o incluso mejorar hasta cierto punto.</p>
+<p>#Punto óptimo</p>
+<p>Existe un rango intermedio de K donde la precisión de prueba es máxima y la diferencia con la de entrenamiento es mínima. Este rango representa el equilibrio entre sesgo y varianza.</p>
+<p>Un valor de K demasiado alto provoca que el modelo se vuelva demasiado general y pierda capacidad para capturar patrones locales, reduciendo la precisión tanto en entrenamiento como en prueba.</p>
+<p>#Conclusión práctica</p>
+<p>El análisis sugiere seleccionar un K dentro del rango donde la curva de test accuracy alcanza su punto más alto y está cercana a la de training accuracy, ya que es ahí donde el modelo presenta la mejor capacidad de generalización.</p>
+<p>Este tipo de gráfico es fundamental para evitar tanto el sobreajuste como el subajuste y optimizar el hiperparámetro K de manera informada.</p>
 <p>Podriamos utilizar un rango entre 15-19</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2273,9 +2373,8 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8537
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 17 ---
+
+--- K = 17 ---
 Confusion Matrix:
  [[563  38]
  [105 179]]
@@ -2290,8 +2389,9 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8558
-
---- K = 18 ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 18 ---
 Confusion Matrix:
  [[568  33]
  [113 171]]
@@ -2322,9 +2422,8 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8618
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 20 ---
+
+--- K = 20 ---
 Confusion Matrix:
  [[567  34]
  [111 173]]
@@ -2339,8 +2438,9 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8610
-
---- K = 21 ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 21 ---
 Confusion Matrix:
  [[567  34]
  [108 176]]
@@ -2397,6 +2497,25 @@ ROC-AUC: 0.8626
 </div>
 </div>
 </div>
+<p>#Precisión general
+El accuracy se mantiene bastante estable en todo el rango (≈ 0.83–0.84), con el valor máximo en K = 21 (0.8395).</p>
+<p>Esto indica que todos los modelos tienen un rendimiento muy similar en exactitud global, pero pequeñas diferencias pueden ser relevantes dependiendo del objetivo.</p>
+<p>#Precisión (precision)
+Los valores más altos de precisión están en K = 18, 20, 21 y 22 (≈ 0.838), lo que significa que estos modelos tienden a cometer menos falsos positivos.
+Sin embargo, alta precisión no siempre implica mejor modelo si el recall es bajo.</p>
+<p>#Sensibilidad (recall)
+El recall más alto se observa en K = 17 (0.6302), lo que significa que este valor de K identifica la mayor proporción de casos positivos reales.
+Los K más altos (18, 20, 22) muestran una caída en recall hasta ≈ 0.6021, lo que significa que el modelo empieza a perder casos positivos.</p>
+<p>#Equilibrio general (F1-Score)
+El mejor F1-score se logra en K = 17 (0.7146), seguido de cerca por K = 21 (0.7126).
+Esto sugiere que K = 17 ofrece el mejor balance entre precisión y recall.</p>
+<p>#Discriminación del modelo (ROC-AUC)
+El valor más alto de ROC-AUC se da en K = 21 (0.8632), seguido por K = 19 y 20 (≈ 0.861–0.862).
+Un alto ROC-AUC indica que el modelo separa bien las clases, incluso si la precisión o el recall no son óptimos.</p>
+<p>#Conclusión
+Si se prioriza el equilibrio entre precisión y recall → K = 17 es la mejor opción.
+Si se prioriza la capacidad de discriminación (ROC-AUC) → K = 21 sería el más indicado.</p>
+<p>Si se quiere alta precisión minimizando falsos positivos → valores como K = 18 o 22 funcionan bien, pero sacrifican recall.</p>
 <p>Podemos observar que cuando k es 17 tiene los valores mas balanceados entre todas las metricas escogidas sin embargo 21 tiene mayor Roc_Auc</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2835,10 +2954,442 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p>Si bien k=17 y k=21 pueden ser candidatos al k a escoger hay que analizar mas a fondo realizando una validuacion manual</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k_min</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">k_max</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">n_repeticiones</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">mejor_k</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">mejor_score</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">resultados_por_k</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k_min</span><span class="p">,</span> <span class="n">k_max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">resultados_train</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">resultados_test</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_repeticiones</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+            <span class="n">X_clas</span><span class="p">,</span> <span class="n">Y_clas</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">Y_clas</span>
+        <span class="p">)</span>
+        <span class="n">y_train</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_train</span> <span class="o">==</span> <span class="s2">&quot;Dropout&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">y_test</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="s2">&quot;Dropout&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">agrupacion</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columnas_agrupar</span><span class="p">,</span> <span class="n">umbral</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">categoria_agrupada</span><span class="o">=</span><span class="s1">&#39;-1&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columnas_agrupar</span><span class="p">:</span>
+            <span class="n">freqs_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">cat_poco_freq</span> <span class="o">=</span> <span class="n">freqs_train</span><span class="p">[</span><span class="n">freqs_train</span> <span class="o">&lt;</span> <span class="mf">0.02</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+            <span class="n">X_test</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">aplicar_agrupacion</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">cat_poco_freq</span><span class="p">)</span>
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columnas_agrupar</span><span class="p">)</span>
+        <span class="n">X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columnas_agrupar</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">align</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapeo_educativo_padres</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapeo_educativo_padres</span><span class="p">)</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapeo_educativo_padres</span><span class="p">)</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapeo_educativo_padres</span><span class="p">)</span>
+        <span class="n">mediana_madre</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+        <span class="n">mediana_padre</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">mediana_madre</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">mediana_padre</span><span class="p">)</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Mother&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">mediana_madre</span><span class="p">)</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="s2">&quot;Father&#39;s qualification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">mediana_padre</span><span class="p">)</span>
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="s1">&#39;Marital status&#39;</span><span class="p">)</span>
+        <span class="n">X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="s1">&#39;Marital status&#39;</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;Previous qualification&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;Previous qualification&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">map_educacion</span><span class="p">)</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;Previous qualification&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;Previous qualification&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">map_educacion</span><span class="p">)</span>
+        <span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+        <span class="n">X_train</span><span class="p">[</span><span class="n">Numericas</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">Numericas</span><span class="p">])</span>
+        <span class="n">X_test</span><span class="p">[</span><span class="n">Numericas</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="n">Numericas</span><span class="p">])</span>
+        <span class="n">smote</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">smote</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+        <span class="n">f1_train</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">)</span>
+        <span class="n">f1_test</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">)</span>
+
+        <span class="n">resultados_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f1_train</span><span class="p">)</span>
+        <span class="n">resultados_test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f1_test</span><span class="p">)</span>
+    <span class="n">promedio_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">resultados_train</span><span class="p">)</span>
+    <span class="n">promedio_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">resultados_test</span><span class="p">)</span>
+    <span class="n">resultados_por_k</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="n">promedio_train</span><span class="p">,</span> <span class="n">promedio_test</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">promedio_test</span> <span class="o">&gt;</span> <span class="n">mejor_score</span><span class="p">:</span>
+        <span class="n">mejor_score</span> <span class="o">=</span> <span class="n">promedio_test</span>
+        <span class="n">mejor_k</span> <span class="o">=</span> <span class="n">k</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resultados por k (F1-score):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">train_f1</span><span class="p">,</span> <span class="n">test_f1</span> <span class="ow">in</span> <span class="n">resultados_por_k</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;k=</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> | Train: </span><span class="si">{</span><span class="n">train_f1</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | Test: </span><span class="si">{</span><span class="n">test_f1</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Mejor k: </span><span class="si">{</span><span class="n">mejor_k</span><span class="si">}</span><span class="s2"> con F1-score en test de </span><span class="si">{</span><span class="n">mejor_score</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">],</span> <span class="n">line</span> <span class="mi">49</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">49</span> <span class="n">f1_train</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">f1_test</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="n">resultados_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f1_train</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\neighbors\_classification.py:274,</span> in <span class="ni">KNeighborsClassifier.predict</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="c1"># In that case, we do not need the distances to perform</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>     <span class="c1"># the weighting so we do not compute them.</span>
+<span class="ne">--&gt; </span><span class="mi">274</span>     <span class="n">neigh_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="n">neigh_dist</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\neighbors\_base.py:869,</span> in <span class="ni">KNeighborsMixin.kneighbors</span><span class="nt">(self, X, n_neighbors, return_distance)</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span> <span class="n">use_pairwise_distances_reductions</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_fit_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>     <span class="ow">and</span> <span class="n">ArgKmin</span><span class="o">.</span><span class="n">is_usable_for</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">X</span> <span class="k">if</span> <span class="n">X</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">867</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">if</span> <span class="n">use_pairwise_distances_reductions</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">869</span>     <span class="n">results</span> <span class="o">=</span> <span class="n">ArgKmin</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>         <span class="n">Y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="n">k</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>         <span class="n">metric_kwargs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_params_</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>         <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">876</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">877</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span> <span class="k">elif</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_fit_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;precomputed&quot;</span> <span class="ow">and</span> <span class="n">issparse</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>     <span class="n">results</span> <span class="o">=</span> <span class="n">_kneighbors_from_graph</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>         <span class="n">X</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span>
+<span class="g g-Whitespace">    </span><span class="mi">884</span>     <span class="p">)</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py:281,</span> in <span class="ni">ArgKmin.compute</span><span class="nt">(cls, X, Y, k, metric, chunk_size, metric_kwargs, strategy, return_distance)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Compute the argkmin reduction.</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span><span class="sd"> Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="sd"> returns.</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">Y</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="k">return</span> <span class="n">ArgKmin64</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span>         <span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">284</span>         <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span>         <span class="n">metric</span><span class="o">=</span><span class="n">metric</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>         <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="n">metric_kwargs</span><span class="o">=</span><span class="n">metric_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span>         <span class="n">strategy</span><span class="o">=</span><span class="n">strategy</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">290</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">292</span> <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">Y</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span>     <span class="k">return</span> <span class="n">ArgKmin32</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">302</span>     <span class="p">)</span>
+
+<span class="nn">File sklearn\\metrics\\_pairwise_distances_reduction\\_argkmin.pyx:59,</span> in <span class="ni">sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute</span><span class="nt">()</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\threadpoolctl.py:592,</span> in <span class="ni">_ThreadpoolLimiter.__exit__</span><span class="nt">(self, type, value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">589</span> <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span>     <span class="k">return</span> <span class="bp">self</span>
+<span class="ne">--&gt; </span><span class="mi">592</span> <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">593</span>     <span class="bp">self</span><span class="o">.</span><span class="n">restore_original_limits</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">595</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">596</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrap</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">controller</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_api</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="knn-regresion">
-<h1>KNN regresion<a class="headerlink" href="#knn-regresion" title="Link to this heading">#</a></h1>
+<section id="knn-regresion">
+<h2>KNN regresion<a class="headerlink" href="#knn-regresion" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighbors_settings</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -2913,11 +3464,41 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dd763f91612db3d14a7d734fb4798a29281677568d95051864ef565cbc1fec70.png" src="_images/dd763f91612db3d14a7d734fb4798a29281677568d95051864ef565cbc1fec70.png" />
-<img alt="_images/0c467bc3062ba70aab7a8224eab3313fbcc8b6b4a0adde8b3ed6751581e96d73.png" src="_images/0c467bc3062ba70aab7a8224eab3313fbcc8b6b4a0adde8b3ed6751581e96d73.png" />
-<img alt="_images/62399b7a8b14f05e60cb83769cf343ddd2380da34a81fd6260768866c4d13291.png" src="_images/62399b7a8b14f05e60cb83769cf343ddd2380da34a81fd6260768866c4d13291.png" />
+<img alt="_images/40eafd72ed81037ae9a656b989991000db1f440172ded9695015835e55f00d69.png" src="_images/40eafd72ed81037ae9a656b989991000db1f440172ded9695015835e55f00d69.png" />
+<img alt="_images/fdbbb2bc1e8da3e805e9678fb03b56fcc5f8d74355fb215ef118d8fbeb902d2b.png" src="_images/fdbbb2bc1e8da3e805e9678fb03b56fcc5f8d74355fb215ef118d8fbeb902d2b.png" />
+<img alt="_images/acf779d1a0c1788780d0a4a3f750ff2bbf8d088b3a1d49f2fc11d7846e2cdd88.png" src="_images/acf779d1a0c1788780d0a4a3f750ff2bbf8d088b3a1d49f2fc11d7846e2cdd88.png" />
 </div>
 </div>
+<p>#R² vs K
+Tendencia general:
+Con valores muy bajos de K (1–3), el R² en entrenamiento es extremadamente alto (cercano a 1), lo que indica sobreajuste: el modelo memoriza los datos de entrenamiento pero no generaliza bien.
+El R² en prueba es bajo al inicio, luego aumenta hasta estabilizarse, lo que sugiere que valores moderados de K permiten mejor generalización.</p>
+<p>#Punto de equilibrio:</p>
+<p>Hay un rango intermedio (aprox. K entre 8 y 15) donde el R² en prueba es máximo y la diferencia con el entrenamiento es pequeña, lo que indica un buen balance entre sesgo y varianza.</p>
+<p>#Conclusión parcial:</p>
+<p>Valores muy bajos de K → sobreajuste.
+Valores muy altos → subajuste, pues el modelo pierde capacidad predictiva.
+Rango recomendado: K ≈ 8–15 para un buen desempeño.</p>
+<p>#MAE vs K
+Interpretación:
+El MAE mide el error medio absoluto; cuanto más bajo, mejor.</p>
+<p>#Patrón observado:</p>
+<p>En K pequeños, el error en entrenamiento es mínimo (por sobreajuste), pero el de prueba es más alto.
+A medida que aumenta K, el MAE en prueba disminuye hasta un punto óptimo y luego empieza a subir de nuevo, reflejando pérdida de precisión por exceso de suavizado en las predicciones.</p>
+<p>#Conclusión parcial:</p>
+<p>El mínimo error de prueba parece alcanzarse en un K intermedio (cercano al rango que vimos en R²: 8–15).</p>
+<p>#RMSE vs K
+Interpretación:
+El RMSE penaliza más los errores grandes que el MAE; es útil para evaluar predicciones con posibles outliers.</p>
+<p>#Patrón observado:</p>
+<p>Misma tendencia que el MAE: errores de entrenamiento muy bajos al inicio, pero errores de prueba relativamente altos para K pequeños.
+El RMSE en prueba baja hasta un valor mínimo en un K intermedio y luego vuelve a subir al aumentar demasiado K.</p>
+<p>#Conclusión parcial:</p>
+<p>El comportamiento confirma que el rango K ≈ 8–15 ofrece el mejor balance para minimizar errores grandes.</p>
+<p>#Conclusión general</p>
+<p>Las tres métricas (R², MAE, RMSE) coinciden en que un K intermedio (8–15) es el más recomendable para evitar tanto el sobreajuste como el subajuste.
+K muy bajos → modelo demasiado complejo, errores bajos en entrenamiento pero pobre generalización.
+K muy altos → modelo demasiado simple, pierde capacidad de capturar patrones y aumenta el error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mejor K para R²</span>
@@ -2942,11 +3523,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El mejor valor de K para R² es 8
-Con un R² de: 0.7129
+Con un R² de: 0.7130
 El mejor valor de K para MAE es 4
 Con un MAE de: 2.2520
 El mejor valor de K para RMSE es 8
-Con un RMSE de: 3.8231
+Con un RMSE de: 3.8230
 </pre></div>
 </div>
 </div>
@@ -2975,9 +3556,24 @@ Con un RMSE de: 3.8231
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/473e046203c64141db4682a8064343d2c7eeb9bfb5468b8f954552ae71de4eb6.png" src="_images/473e046203c64141db4682a8064343d2c7eeb9bfb5468b8f954552ae71de4eb6.png" />
+<img alt="_images/d4067ee49cd2c448bc2c83fb22091e0712fa857d0fc661e29627ac6414f915bf.png" src="_images/d4067ee49cd2c448bc2c83fb22091e0712fa857d0fc661e29627ac6414f915bf.png" />
 </div>
 </div>
+<p>#Análisis
+Distribución de puntos:
+Los puntos representan cada observación del conjunto de prueba, con el valor real en el eje X y la predicción del modelo en el eje Y.
+La línea roja discontinua es la línea ideal, donde las predicciones coinciden exactamente con los valores reales (error = 0).</p>
+<p>#Patrón observado:</p>
+<p>Una buena parte de los puntos se alinean relativamente cerca de la línea ideal, lo que indica que el modelo tiene una precisión aceptable en la mayoría de los casos.
+Sin embargo, existe cierta dispersión en torno a la línea, lo que muestra errores en las predicciones:
+Algunos puntos están por encima → sobreestimaciones.
+Otros por debajo → subestimaciones.</p>
+<p>#Rango de predicciones:</p>
+<p>El modelo parece funcionar mejor en el rango medio de valores reales.
+En los extremos (valores muy altos o muy bajos), la dispersión aumenta, lo que sugiere que el modelo tiene más dificultad para predecir casos atípicos o extremos.</p>
+<p>#Conclusión:</p>
+<p>El K elegido (best_k_r2) logra una relación razonablemente buena entre valores reales y predichos, con tendencia clara a seguir la línea ideal.
+La dispersión residual sugiere que el modelo no es perfecto, pero es capaz de capturar la relación general de forma adecuada, especialmente en valores centrales.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">best_k_mae</span><span class="p">)</span>
@@ -3002,9 +3598,23 @@ Con un RMSE de: 3.8231
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cadc739adf3c90a64fa8c6960ed7d4c735375ada2d42e5e78b247fcd2f2230fb.png" src="_images/cadc739adf3c90a64fa8c6960ed7d4c735375ada2d42e5e78b247fcd2f2230fb.png" />
+<img alt="_images/94a367ba1f0c82da53783938ec4eb263d66d53dcf01d7049d811ac3e5dc629ca.png" src="_images/94a367ba1f0c82da53783938ec4eb263d66d53dcf01d7049d811ac3e5dc629ca.png" />
 </div>
 </div>
+<p>#Análisis
+Estructura general:</p>
+<p>Cada punto representa una observación del conjunto de prueba.</p>
+<p>La línea roja discontinua indica la predicción perfecta (valores predichos = valores reales).</p>
+<p>Una buena alineación de puntos con esta línea refleja un buen rendimiento del modelo.</p>
+<p>#Patrón de los datos:</p>
+<p>En este caso, los puntos muestran una distribución bastante compacta alrededor de la línea ideal, lo que es coherente con haber optimizado el MAE (error absoluto medio).</p>
+<p>El hecho de que el MAE haya sido el criterio de selección sugiere que el modelo busca minimizar las desviaciones absolutas, resultando en predicciones más equilibradas tanto para valores bajos como altos.</p>
+<p>#Tendencias visibles:</p>
+<p>Menor dispersión en el rango central → el modelo predice con mayor precisión los valores que son más frecuentes.</p>
+<p>Ligero aumento de dispersión en los extremos, aunque parece más controlado que en el caso optimizado para R², lo que implica que el ajuste con MAE es más robusto frente a valores atípicos.</p>
+<p>#Conclusión:</p>
+<p>El K seleccionado por MAE produce un modelo estable, con errores más homogéneos y menos desviaciones extremas.</p>
+<p>Esto lo hace especialmente adecuado en contextos donde es más importante minimizar errores grandes y mantener consistencia que maximizar el ajuste global (R²).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">best_k_rmse</span><span class="p">)</span>
@@ -3029,9 +3639,25 @@ Con un RMSE de: 3.8231
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/473e046203c64141db4682a8064343d2c7eeb9bfb5468b8f954552ae71de4eb6.png" src="_images/473e046203c64141db4682a8064343d2c7eeb9bfb5468b8f954552ae71de4eb6.png" />
+<img alt="_images/d4067ee49cd2c448bc2c83fb22091e0712fa857d0fc661e29627ac6414f915bf.png" src="_images/d4067ee49cd2c448bc2c83fb22091e0712fa857d0fc661e29627ac6414f915bf.png" />
 </div>
 </div>
+<p>#Análisis
+Interpretación del gráfico:
+Cada punto representa un valor real (eje X) y su predicción correspondiente (eje Y).
+La línea roja discontinua es la línea ideal de predicción perfecta.
+Cuanto más cercanos estén los puntos a esa línea, menor será el error de predicción.</p>
+<p>#Efecto de optimizar RMSE:</p>
+<p>El RMSE penaliza más fuertemente los errores grandes que el MAE, por lo que el modelo intenta ajustarse mejor a los valores extremos.
+Esto suele resultar en una predicción más precisa para valores altos y bajos, pero a veces a costa de un rendimiento un poco menos homogéneo en el rango central.</p>
+<p>#Observaciones visuales:</p>
+<p>Se aprecia que los puntos de valores extremos están más alineados con la línea ideal que en los otros criterios, indicando que el modelo maneja mejor casos alejados de la media.
+En el rango medio, la dispersión puede ser ligeramente mayor que en el modelo optimizado por MAE, pero no excesiva.
+Hay pocos puntos alejados de la línea, lo que refleja que el RMSE ha reducido errores graves.</p>
+<p>#Conclusión:</p>
+<p>El K optimizado para RMSE es especialmente útil cuando los errores grandes tienen un impacto crítico y deben minimizarse lo más posible.
+Este ajuste puede ser preferible si se quiere proteger el modelo contra predicciones muy desviadas, incluso si el promedio de los errores absolutos es ligeramente mayor que con MAE</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3073,15 +3699,6 @@ Con un RMSE de: 3.8231
         <p class="prev-next-title">Introduccion al dataset</p>
       </div>
     </a>
-    <a class="right-next"
-       href="Documentacion_Conclusiones.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Documentacion</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -3098,17 +3715,21 @@ Con un RMSE de: 3.8231
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificacion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-la-tasa-de-inflacion">Análisis de la Tasa de Inflación</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-de-datos">Division de datos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificacion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-clasificacion">KNN clasificacion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+</ul>
   </nav></div>
 
 </div></div>
@@ -3122,7 +3743,7 @@ Con un RMSE de: 3.8231
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Miguel Jaimes, Mateo Molinares, Mateo Gomez
 </p>
 
   </div>
