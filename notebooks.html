@@ -183,6 +183,17 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduccion_a_las_variables.html">Introduccion al dataset</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementacion del codigo</a></li>
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -378,6 +389,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="nav section-nav flex-column">
@@ -389,10 +401,31 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-procesamiento-agrupado">Comparacion con procesamiento agrupado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-clasificacion">KNN clasificacion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r2-vs-k">R² vs K</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-parcial">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mae-vs-k">MAE vs K</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-observado">Patrón observado:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rmse-vs-k">RMSE vs K</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Patrón observado:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-general">Conclusión general</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis">Análisis</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-los-datos">Patrón de los datos:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tendencias-visibles">Tendencias visibles:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusión:</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -1426,8 +1459,8 @@ La presencia de variabilidad en la inflación sugiere que el dataset incluye dat
 <img alt="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" src="_images/ffcb50b173b6d880b957cdddde580465e9db9f7573b6b5aef41d09e77ab69336.png" />
 </div>
 </div>
-<p>#Análisis de diagramas de caja y bigotes
-Los diagramas de caja y bigotes permiten observar la dispersión, tendencia central y presencia de valores atípicos en las variables numéricas.</p>
+<p><strong>Análisis de diagramas de caja y bigotes</strong></p>
+<p>Los diagramas de caja y bigotes permiten observar la dispersión, tendencia central y presencia de valores atípicos en las variables numéricas.</p>
 <p>#Variables académicas</p>
 <p>Previous qualification (grade) y Admission grade presentan una distribución relativamente concentrada, con la mayoría de los datos cercanos a la mediana. Sin embargo, se identifican algunos valores atípicos altos y bajos que podrían corresponder a estudiantes con rendimientos excepcionalmente altos o bajos en su formación previa.</p>
 <p>Variables como Curricular units (approved/enrolled/evaluations) muestran asimetría positiva, es decir, colas más largas hacia la derecha. Esto indica que la mayoría de estudiantes se concentran en valores bajos o moderados, pero existe un pequeño grupo que cursa o aprueba un número muy elevado de asignaturas.</p>
@@ -1820,6 +1853,9 @@ Name: count, dtype: int64
 Name: count, dtype: int64
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <img alt="_images/2fde6b422b6041f5438ba29ed49ba3ad81ea11cfa7fdb81e135e449d7a2253aa.png" src="_images/2fde6b422b6041f5438ba29ed49ba3ad81ea11cfa7fdb81e135e449d7a2253aa.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scholarship holder
 0    3325
@@ -1965,6 +2001,9 @@ dtype: float64
 </div>
 </div>
 </section>
+</section>
+<section id="comparacion-con-procesamiento-agrupado">
+<h2>Comparacion con procesamiento agrupado<a class="headerlink" href="#comparacion-con-procesamiento-agrupado" title="Link to this heading">#</a></h2>
 </section>
 <section id="preprocesamiento-de-datos">
 <h2>Preprocesamiento de datos<a class="headerlink" href="#preprocesamiento-de-datos" title="Link to this heading">#</a></h2>
@@ -2373,8 +2412,9 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8537
-
---- K = 17 ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 17 ---
 Confusion Matrix:
  [[563  38]
  [105 179]]
@@ -2389,9 +2429,8 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8558
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 18 ---
+
+--- K = 18 ---
 Confusion Matrix:
  [[568  33]
  [113 171]]
@@ -2406,8 +2445,9 @@ Classification Report:
 weighted avg       0.84      0.84      0.83       885
 
 ROC-AUC: 0.8594
-
---- K = 19 ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- K = 19 ---
 Confusion Matrix:
  [[564  37]
  [108 176]]
@@ -3133,178 +3173,6 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   warnings.warn(
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
-  warnings.warn(
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">],</span> <span class="n">line</span> <span class="mi">49</span>
@@ -3314,73 +3182,62 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">f1_test</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="n">resultados_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f1_train</span><span class="p">)</span>
 
-<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\neighbors\_classification.py:274,</span> in <span class="ni">KNeighborsClassifier.predict</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="c1"># In that case, we do not need the distances to perform</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>     <span class="c1"># the weighting so we do not compute them.</span>
-<span class="ne">--&gt; </span><span class="mi">274</span>     <span class="n">neigh_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="n">neigh_dist</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span> <span class="k">else</span><span class="p">:</span>
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\neighbors\_classification.py:298,</span> in <span class="ni">KNeighborsClassifier.predict</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">296</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">classes_k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">classes_</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span>     <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">298</span>         <span class="n">mode</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_mode</span><span class="p">(</span><span class="n">_y</span><span class="p">[</span><span class="n">neigh_ind</span><span class="p">,</span> <span class="n">k</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">299</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">300</span>         <span class="n">mode</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">weighted_mode</span><span class="p">(</span><span class="n">_y</span><span class="p">[</span><span class="n">neigh_ind</span><span class="p">,</span> <span class="n">k</span><span class="p">],</span> <span class="n">weights</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\neighbors\_base.py:869,</span> in <span class="ni">KNeighborsMixin.kneighbors</span><span class="nt">(self, X, n_neighbors, return_distance)</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span> <span class="n">use_pairwise_distances_reductions</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_fit_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>     <span class="ow">and</span> <span class="n">ArgKmin</span><span class="o">.</span><span class="n">is_usable_for</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">X</span> <span class="k">if</span> <span class="n">X</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">if</span> <span class="n">use_pairwise_distances_reductions</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">869</span>     <span class="n">results</span> <span class="o">=</span> <span class="n">ArgKmin</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>         <span class="n">Y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fit_X</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="n">k</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span>         <span class="n">metric_kwargs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">effective_metric_params_</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span>         <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span> <span class="k">elif</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_fit_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;precomputed&quot;</span> <span class="ow">and</span> <span class="n">issparse</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>     <span class="n">results</span> <span class="o">=</span> <span class="n">_kneighbors_from_graph</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">883</span>         <span class="n">X</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="n">n_neighbors</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span>
-<span class="g g-Whitespace">    </span><span class="mi">884</span>     <span class="p">)</span>
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\utils\fixes.py:102,</span> in <span class="ni">_mode</span><span class="nt">(a, axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span> <span class="k">def</span><span class="w"> </span><span class="nf">_mode</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="k">if</span> <span class="n">sp_version</span> <span class="o">&gt;=</span> <span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;1.9.0&quot;</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">102</span>         <span class="n">mode</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span>         <span class="k">if</span> <span class="n">sp_version</span> <span class="o">&gt;=</span> <span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;1.10.999&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>             <span class="c1"># scipy.stats.mode has changed returned array shape with axis=None</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>             <span class="c1"># and keepdims=True, see https://github.com/scipy/scipy/pull/17561</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span>             <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py:281,</span> in <span class="ni">ArgKmin.compute</span><span class="nt">(cls, X, Y, k, metric, chunk_size, metric_kwargs, strategy, return_distance)</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Compute the argkmin reduction.</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span><span class="sd"> Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="sd"> returns.</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">Y</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="k">return</span> <span class="n">ArgKmin64</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>         <span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">284</span>         <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">285</span>         <span class="n">metric</span><span class="o">=</span><span class="n">metric</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">286</span>         <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="n">metric_kwargs</span><span class="o">=</span><span class="n">metric_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span>         <span class="n">strategy</span><span class="o">=</span><span class="n">strategy</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">292</span> <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">Y</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">293</span>     <span class="k">return</span> <span class="n">ArgKmin32</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>         <span class="n">return_distance</span><span class="o">=</span><span class="n">return_distance</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span>     <span class="p">)</span>
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\scipy\stats\_axis_nan_policy.py:603,</span> in <span class="ni">_axis_nan_policy_factory.&lt;locals&gt;.axis_nan_policy_decorator.&lt;locals&gt;.axis_nan_policy_wrapper</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="g g-Whitespace">    </span><span class="mi">600</span>         <span class="k">return</span> <span class="n">result_to_tuple</span><span class="p">(</span><span class="n">hypotest_fun_out</span><span class="p">(</span><span class="o">*</span><span class="n">samples</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">603</span> <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">hypotest_fun</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">arr</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="n">res</span> <span class="o">=</span> <span class="n">_add_reduced_axes</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">reduced_axes</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">605</span> <span class="k">return</span> <span class="n">tuple_to_result</span><span class="p">(</span><span class="o">*</span><span class="n">res</span><span class="p">)</span>
 
-<span class="nn">File sklearn\\metrics\\_pairwise_distances_reduction\\_argkmin.pyx:59,</span> in <span class="ni">sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute</span><span class="nt">()</span>
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\numpy\lib\_shape_base_impl.py:407,</span> in <span class="ni">apply_along_axis</span><span class="nt">(func1d, axis, arr, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span> <span class="n">buff</span><span class="p">[</span><span class="n">ind0</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span>
+<span class="g g-Whitespace">    </span><span class="mi">406</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">inds</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">407</span>     <span class="n">buff</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">asanyarray</span><span class="p">(</span><span class="n">func1d</span><span class="p">(</span><span class="n">inarr_view</span><span class="p">[</span><span class="n">ind</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">409</span> <span class="n">res</span> <span class="o">=</span> <span class="n">transpose</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="n">buff_permute</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">410</span> <span class="k">return</span> <span class="n">conv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 
-<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\threadpoolctl.py:592,</span> in <span class="ni">_ThreadpoolLimiter.__exit__</span><span class="nt">(self, type, value, traceback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">589</span> <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span>     <span class="k">return</span> <span class="bp">self</span>
-<span class="ne">--&gt; </span><span class="mi">592</span> <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">593</span>     <span class="bp">self</span><span class="o">.</span><span class="n">restore_original_limits</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">595</span> <span class="nd">@classmethod</span>
-<span class="g g-Whitespace">    </span><span class="mi">596</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrap</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">controller</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_api</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\scipy\stats\_axis_nan_policy.py:600,</span> in <span class="ni">_axis_nan_policy_factory.&lt;locals&gt;.axis_nan_policy_decorator.&lt;locals&gt;.axis_nan_policy_wrapper.&lt;locals&gt;.hypotest_fun</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span> <span class="k">if</span> <span class="n">is_too_small</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">599</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">n_out</span><span class="p">,</span> <span class="n">NaN</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">600</span> <span class="k">return</span> <span class="n">result_to_tuple</span><span class="p">(</span><span class="n">hypotest_fun_out</span><span class="p">(</span><span class="o">*</span><span class="n">samples</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">))</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\scipy\stats\_stats_py.py:528,</span> in <span class="ni">mode</span><span class="nt">(a, axis, nan_policy, keepdims)</span>
+<span class="g g-Whitespace">    </span><span class="mi">525</span>     <span class="n">NaN</span> <span class="o">=</span> <span class="n">_get_nan</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="k">return</span> <span class="n">ModeResult</span><span class="p">(</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">NaN</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">NaN</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">528</span> <span class="n">vals</span><span class="p">,</span> <span class="n">cnts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span> <span class="n">modes</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[</span><span class="n">cnts</span><span class="o">.</span><span class="n">argmax</span><span class="p">()],</span> <span class="n">cnts</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span> <span class="k">return</span> <span class="n">ModeResult</span><span class="p">(</span><span class="n">modes</span><span class="p">[()],</span> <span class="n">counts</span><span class="p">[()])</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\numpy\lib\_arraysetops_impl.py:289,</span> in <span class="ni">unique</span><span class="nt">(ar, return_index, return_inverse, return_counts, axis, equal_nan)</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span> <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">289</span>     <span class="n">ret</span> <span class="o">=</span> <span class="n">_unique1d</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">return_index</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">,</span> 
+<span class="g g-Whitespace">    </span><span class="mi">290</span>                     <span class="n">equal_nan</span><span class="o">=</span><span class="n">equal_nan</span><span class="p">,</span> <span class="n">inverse_shape</span><span class="o">=</span><span class="n">ar</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span>     <span class="k">return</span> <span class="n">_unpack_tuple</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span> <span class="c1"># axis was specified and not None</span>
+
+<span class="nn">File c:\Users\migue\miniconda3\envs\ml_venv\lib\site-packages\numpy\lib\_arraysetops_impl.py:356,</span> in <span class="ni">_unique1d</span><span class="nt">(ar, return_index, return_inverse, return_counts, equal_nan, inverse_shape, axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>     <span class="n">aux</span> <span class="o">=</span> <span class="n">ar</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">356</span>     <span class="n">ar</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span>     <span class="n">aux</span> <span class="o">=</span> <span class="n">ar</span>
+<span class="g g-Whitespace">    </span><span class="mi">358</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">aux</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -3469,33 +3326,52 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <img alt="_images/acf779d1a0c1788780d0a4a3f750ff2bbf8d088b3a1d49f2fc11d7846e2cdd88.png" src="_images/acf779d1a0c1788780d0a4a3f750ff2bbf8d088b3a1d49f2fc11d7846e2cdd88.png" />
 </div>
 </div>
-<p>#R² vs K
-Tendencia general:
+<section id="r2-vs-k">
+<h3>R² vs K<a class="headerlink" href="#r2-vs-k" title="Link to this heading">#</a></h3>
+<p>Tendencia general:
 Con valores muy bajos de K (1–3), el R² en entrenamiento es extremadamente alto (cercano a 1), lo que indica sobreajuste: el modelo memoriza los datos de entrenamiento pero no generaliza bien.
 El R² en prueba es bajo al inicio, luego aumenta hasta estabilizarse, lo que sugiere que valores moderados de K permiten mejor generalización.</p>
-<p>#Punto de equilibrio:</p>
+<p><strong>Punto de equilibrio:</strong></p>
 <p>Hay un rango intermedio (aprox. K entre 8 y 15) donde el R² en prueba es máximo y la diferencia con el entrenamiento es pequeña, lo que indica un buen balance entre sesgo y varianza.</p>
-<p>#Conclusión parcial:</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conclusion-parcial">
+<h1>Conclusión parcial:<a class="headerlink" href="#conclusion-parcial" title="Link to this heading">#</a></h1>
 <p>Valores muy bajos de K → sobreajuste.
 Valores muy altos → subajuste, pues el modelo pierde capacidad predictiva.
 Rango recomendado: K ≈ 8–15 para un buen desempeño.</p>
-<p>#MAE vs K
-Interpretación:
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mae-vs-k">
+<h1>MAE vs K<a class="headerlink" href="#mae-vs-k" title="Link to this heading">#</a></h1>
+<p>Interpretación:
 El MAE mide el error medio absoluto; cuanto más bajo, mejor.</p>
-<p>#Patrón observado:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="patron-observado">
+<h1>Patrón observado:<a class="headerlink" href="#patron-observado" title="Link to this heading">#</a></h1>
 <p>En K pequeños, el error en entrenamiento es mínimo (por sobreajuste), pero el de prueba es más alto.
 A medida que aumenta K, el MAE en prueba disminuye hasta un punto óptimo y luego empieza a subir de nuevo, reflejando pérdida de precisión por exceso de suavizado en las predicciones.</p>
-<p>#Conclusión parcial:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Conclusión parcial:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>El mínimo error de prueba parece alcanzarse en un K intermedio (cercano al rango que vimos en R²: 8–15).</p>
-<p>#RMSE vs K
-Interpretación:
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="rmse-vs-k">
+<h1>RMSE vs K<a class="headerlink" href="#rmse-vs-k" title="Link to this heading">#</a></h1>
+<p>Interpretación:
 El RMSE penaliza más los errores grandes que el MAE; es útil para evaluar predicciones con posibles outliers.</p>
-<p>#Patrón observado:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Patrón observado:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
 <p>Misma tendencia que el MAE: errores de entrenamiento muy bajos al inicio, pero errores de prueba relativamente altos para K pequeños.
 El RMSE en prueba baja hasta un valor mínimo en un K intermedio y luego vuelve a subir al aumentar demasiado K.</p>
-<p>#Conclusión parcial:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>Conclusión parcial:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
 <p>El comportamiento confirma que el rango K ≈ 8–15 ofrece el mejor balance para minimizar errores grandes.</p>
-<p>#Conclusión general</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conclusion-general">
+<h1>Conclusión general<a class="headerlink" href="#conclusion-general" title="Link to this heading">#</a></h1>
 <p>Las tres métricas (R², MAE, RMSE) coinciden en que un K intermedio (8–15) es el más recomendable para evitar tanto el sobreajuste como el subajuste.
 K muy bajos → modelo demasiado complejo, errores bajos en entrenamiento pero pobre generalización.
 K muy altos → modelo demasiado simple, pierde capacidad de capturar patrones y aumenta el error.</p>
@@ -3601,18 +3477,26 @@ La dispersión residual sugiere que el modelo no es perfecto, pero es capaz de c
 <img alt="_images/94a367ba1f0c82da53783938ec4eb263d66d53dcf01d7049d811ac3e5dc629ca.png" src="_images/94a367ba1f0c82da53783938ec4eb263d66d53dcf01d7049d811ac3e5dc629ca.png" />
 </div>
 </div>
-<p>#Análisis
-Estructura general:</p>
+<section id="analisis">
+<h2>Análisis<a class="headerlink" href="#analisis" title="Link to this heading">#</a></h2>
+<p>Estructura general:</p>
 <p>Cada punto representa una observación del conjunto de prueba.</p>
 <p>La línea roja discontinua indica la predicción perfecta (valores predichos = valores reales).</p>
 <p>Una buena alineación de puntos con esta línea refleja un buen rendimiento del modelo.</p>
-<p>#Patrón de los datos:</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="patron-de-los-datos">
+<h1>Patrón de los datos:<a class="headerlink" href="#patron-de-los-datos" title="Link to this heading">#</a></h1>
 <p>En este caso, los puntos muestran una distribución bastante compacta alrededor de la línea ideal, lo que es coherente con haber optimizado el MAE (error absoluto medio).</p>
 <p>El hecho de que el MAE haya sido el criterio de selección sugiere que el modelo busca minimizar las desviaciones absolutas, resultando en predicciones más equilibradas tanto para valores bajos como altos.</p>
-<p>#Tendencias visibles:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tendencias-visibles">
+<h1>Tendencias visibles:<a class="headerlink" href="#tendencias-visibles" title="Link to this heading">#</a></h1>
 <p>Menor dispersión en el rango central → el modelo predice con mayor precisión los valores que son más frecuentes.</p>
 <p>Ligero aumento de dispersión en los extremos, aunque parece más controlado que en el caso optimizado para R², lo que implica que el ajuste con MAE es más robusto frente a valores atípicos.</p>
-<p>#Conclusión:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conclusion">
+<h1>Conclusión:<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
 <p>El K seleccionado por MAE produce un modelo estable, con errores más homogéneos y menos desviaciones extremas.</p>
 <p>Esto lo hace especialmente adecuado en contextos donde es más importante minimizar errores grandes y mantener consistencia que maximizar el ajuste global (R²).</p>
 <div class="cell docutils container">
@@ -3657,7 +3541,6 @@ Hay pocos puntos alejados de la línea, lo que refleja que el RMSE ha reducido e
 <p>#Conclusión:</p>
 <p>El K optimizado para RMSE es especialmente útil cuando los errores grandes tienen un impacto crítico y deben minimizarse lo más posible.
 Este ajuste puede ser preferible si se quiere proteger el modelo contra predicciones muy desviadas, incluso si el promedio de los errores absolutos es ligeramente mayor que con MAE</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3715,6 +3598,7 @@ Este ajuste puede ser preferible si se quiere proteger el modelo contra predicci
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementacion del codigo</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones">Funciones</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargado-de-datos">Cargado de datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos">Analisis exploratorio de datos</a><ul class="nav section-nav flex-column">
@@ -3726,10 +3610,31 @@ Este ajuste puede ser preferible si se quiere proteger el modelo contra predicci
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion">Regresion</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-procesamiento-agrupado">Comparacion con procesamiento agrupado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-clasificacion">KNN clasificacion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-regresion">KNN regresion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r2-vs-k">R² vs K</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-parcial">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mae-vs-k">MAE vs K</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-observado">Patrón observado:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rmse-vs-k">RMSE vs K</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Patrón observado:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Conclusión parcial:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-general">Conclusión general</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis">Análisis</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-los-datos">Patrón de los datos:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tendencias-visibles">Tendencias visibles:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusión:</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
